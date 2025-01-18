@@ -86,7 +86,7 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
 
 3. **Set up the folder structure for results**:
 
-Navigate to Classical_Edge_Detection folder and run the following script for folder structure for storing results:
+    Navigate to Classical_Edge_Detection folder and run the following script for folder structure for storing results:
    ```bash
    python folders.py
    ```
