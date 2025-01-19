@@ -214,16 +214,26 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
 
 ### Pb-lite Edge Detection Results:
 
-<img src="Classical_Edge_Detection/results/edges/img1/PbLite_output_1.png" alt="Image 1" width="300">
-<img src="Classical_Edge_Detection/results/edges/img2/PbLite_output_2.png" alt="Image 2" width="300">
-<img src="Classical_Edge_Detection/results/edges/img3/PbLite_output_3.png" alt="Image 3" width="300">
-<img src="Classical_Edge_Detection/results/edges/img4/PbLite_output_4.png" alt="Image 4" width="300">
-<img src="Classical_Edge_Detection/results/edges/img5/PbLite_output_5.png" alt="Image 5" width="300">
-<img src="Classical_Edge_Detection/results/edges/img6/PbLite_output_6.png" alt="Image 6" width="300">
-<img src="Classical_Edge_Detection/results/edges/img7/PbLite_output_7.png" alt="Image 7" width="300">
-<img src="Classical_Edge_Detection/results/edges/img8/PbLite_output_8.png" alt="Image 8" width="300">
-<img src="Classical_Edge_Detection/results/edges/img9/PbLite_output_9.png" alt="Image 9" width="300">
-<img src="Classical_Edge_Detection/results/edges/img10/PbLite_output_10.png" alt="Image 10" width="300">
+<table>
+  <tr>
+    <td><img src="Classical_Edge_Detection/results/edges/img1/PbLite_output_1.png" alt="Image 1" width="200"></td>
+    <td><img src="Classical_Edge_Detection/results/edges/img2/PbLite_output_2.png" alt="Image 2" width="200"></td>
+    <td><img src="Classical_Edge_Detection/results/edges/img3/PbLite_output_3.png" alt="Image 3" width="200"></td>
+  </tr>
+  <tr>
+    <td><img src="Classical_Edge_Detection/results/edges/img4/PbLite_output_4.png" alt="Image 4" width="200"></td>
+    <td><img src="Classical_Edge_Detection/results/edges/img5/PbLite_output_5.png" alt="Image 5" width="200"></td>
+    <td><img src="Classical_Edge_Detection/results/edges/img6/PbLite_output_6.png" alt="Image 6" width="200"></td>
+  </tr>
+  <tr>
+    <td><img src="Classical_Edge_Detection/results/edges/img7/PbLite_output_7.png" alt="Image 7" width="200"></td>
+    <td><img src="Classical_Edge_Detection/results/edges/img8/PbLite_output_8.png" alt="Image 8" width="200"></td>
+    <td><img src="Classical_Edge_Detection/results/edges/img9/PbLite_output_9.png" alt="Image 9" width="200"></td>
+  </tr>
+  <tr>
+    <td colspan="3"><img src="Classical_Edge_Detection/results/edges/img10/PbLite_output_10.png" alt="Image 10" width="600"></td>
+  </tr>
+</table>
 
 
 ## Fine-Tuning for Better Performance
