@@ -251,8 +251,8 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 </table>
 
 **DenseNet**
-<table>
 
+<table>
   <tr>
     <td>
       <figure>
