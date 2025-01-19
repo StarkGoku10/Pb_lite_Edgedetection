@@ -231,7 +231,7 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
     <td><img src="Classical_Edge_Detection/results/edges/img9/PbLite_output_9.png" alt="Image 9" width="200"></td>
   </tr>
   <tr>
-    <td colspan="3"><img src="Classical_Edge_Detection/results/edges/img10/PbLite_output_10.png" alt="Image 10" width="600"></td>
+    <td colspan="3"><img src="Classical_Edge_Detection/results/edges/img10/PbLite_output_10.png" alt="Image 10" width="200"></td>
   </tr>
 </table>
 
