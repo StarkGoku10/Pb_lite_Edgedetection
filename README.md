@@ -63,9 +63,9 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 
 ### Prerequisites
 
-Ensure you have Python 3.8 or later installed. Install additional dependencies listed in the `requirements_pblite.txt` file.
+Ensure you have Python 3.8 or later installed. Install additional dependencies listed in the `requirements.txt` file.
 
-### Setup Instructions
+#### Setup Instructions
 
 1. **Clone this repository**:
    ```bash
@@ -81,7 +81,7 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
 
 2. **Install dependencies**:
    ```bash
-   pip install -r requirements_pblite.txt
+   pip install -r requirements.txt
    ```
 
 3. **Set up the folder structure for results**:
@@ -94,11 +94,15 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
 4. **Dataset**:
     - This project is tested on BSDS500 Dataset, you can download and keep your dataset in the `Datasets/` directory.
 
-## Usage
+**Note** :All the paths to store the intermediate and final results are appropriately directed to the correct directory.
 
-### Running the Code
+#### Running the Code
+Navigate to Classical_Edge_Detection Directory:
+```bash 
+cd Classical_Edge_Detection
+```
 
-Run the main script to process all 10 images in the dataset and generate outputs:
+Run Pb_lite script to process all 10 images in the dataset and generate outputs:
 ```bash
 python pb_lite.py
 ```
@@ -110,12 +114,50 @@ Example:
 ```bash
 python pb_lite.py --Maps_flag=False
 ```
+- **Input**: The script will load and process images stored in `Datasets/BSDS500/Images` directory.
 
-### Outputs
+#### Outputs
 
 - Filter banks visualizations: Saved in `results/filterbanks/`.
 - Maps (texture, brightness, color): Saved in `results/maps/`.
 - Gradients and final edge-detected images: Saved in `results/edges/imgX/` (where `X` is the image number).
+
+### Deep Learning Approaches:
+
+### Prerequisites
+- **Python 3.7** or later.
+- **TensorFlow v1.x**: Ensure TensorFlow v1.x is installed for compatibility with the codebase.
+- **GPU Support (Optional but recommended)**: Install CUDA and cuDNN for faster training.
+- **Dataset**: CIFAR-10 dataset, properly structured in `Datasets/CIFAR10/Train/` and `Datasets/CIFAR10/Test/`.
+- Install additional dependencies listed in the `requirements.txt` file:
+       ```bash
+        pip install -r requirements.txt
+       ```
+
+#### Running the Code
+Navigate to Deep_learning_Architectures Directory:
+```bash 
+cd Deep_learning_Architectures
+```
+Training models:
+- Run `Train.py` script to train a model:
+    ```bash
+    python train.py --BasePath Datasets/CIFAR10/Train \
+                --CheckPointPath Checkpoints/DenseNet/ \
+                --NumEpochs 10 \
+                --MiniBatchSize 64
+    ```
+    **Note**: The default model is DenseNet. To change the model, navigate to `Network/` and choose your model of choice.
+
+    Optional arguments:
+     - `--DivTrain`: Factor to reduce training data for faster epochs (default: `1`).
+     - `--LogsPath`: Path to save TensorBoard logs (default: `Deep_learning_architectures/Logs/DenseNet/`).
+    - `--LoadCheckPoint`: Set to 1 to resume training from the latest checkpoint, otherwise set to 0.
+
+Example:
+```bash
+python pb_lite.py --Maps_flag=False
+```
 
 ## Results
 
