@@ -27,18 +27,16 @@ We also explore multiple **Deep learning(DL)** architectures--**ResNet, ResNeXt,
 ### Pb-lite Edge Detection
 
 1. **Filter Bank Generation**:
-    Generating filter banks for building low level features to measure texture properties and to aggregate regional texture and brightness distributions. 
-   - Leung-Malik filters for textural information.
-   - Difference of Gaussian filters for multi-scale edge detection.
-   - Gabor filters for orientation-specific features.
 
+    Generating filter banks for building low level features to measure texture properties and to aggregate regional texture and brightness distributions. 
+    - Leung-Malik filters for textural information.
+    - Difference of Gaussian filters for multi-scale edge detection.
+    - Gabor filters for orientation-specific features.
 3. **Map Creation**:
    - Texture maps using filter bank responses and K-means clustering.
    - Brightness and color maps using clustering on pixel intensities.
-
 4. **Gradient Computation**:
    - Chi-square gradients using half-disc masks to highlight edges.
-
 5. **Edge Detection**:
    - Combine texture, brightness, and color gradients with Sobel and Canny baselines To generate PB-Lite edge-detected outputs using probabilistic methods.
 
@@ -63,7 +61,7 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 
 ### Prerequisites
 
-Ensure you have Python 3.8 or later installed. Install additional dependencies listed in the `requirements.txt` file.
+    Ensure you have Python 3.8 or later installed. Install additional dependencies listed in the `requirements.txt` file.
 
 ### Setup Instructions
 
@@ -94,7 +92,7 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
 4. **Dataset**:
     - This project is tested on BSDS500 Dataset, you can download and keep your dataset in the `Datasets/` directory.
 
-**Note** :All the paths to store the intermediate and final results are appropriately directed to the correct directory.
+    **Note** :All the paths to store the intermediate and final results are appropriately directed to the correct directory.
 
 ### Running the Code
 
@@ -233,30 +231,30 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
 
 ### Deep Learning Image Classification Results:
 
-Custom Network: Custom CNN Architecture
+**Custom Network: Custom CNN Architecture**
 <table>
   <tr>
     <td>
       <figure>
-        <img src="Deep_learning_Architectures/results/CNN_BN/test/Epochs19.png" alt="Image 1" width="200">
+        <img src="Deep_learning_Architectures/results/CNN_BN/test/Epochs19.png" alt="Image 1" width="250">
         <figcaption>Test Accuracy over Epochs</figcaption>
       </figure>
     </td>
     <td>
       <figure>
-        <img src="Deep_learning_Architectures/results/CNN_BN/test/CNN2.png" alt="Image 2" width="200">
+        <img src="Deep_learning_Architectures/results/CNN_BN/test/CNN2.png" alt="Image 2" width="200>
         <figcaption>Confusion Matrix</figcaption>
       </figure>
     </td>
   </tr>
 </table>
 
-DenseNet
+**DenseNet**
 <table>
   <tr>
     <td>
       <figure>
-        <img src="Deep_learning_Architectures/results/DenseNet/test/Epochs17.png" alt="Image 1" width="200">
+        <img src="Deep_learning_Architectures/results/DenseNet/test/Epochs17.png" alt="Image 1" width="250">
         <figcaption>Test Accuracy over Epochs</figcaption>
       </figure>
     </td>
@@ -269,12 +267,12 @@ DenseNet
   </tr>
 </table>
 
-ResNet
+**ResNet**
 <table>
   <tr>
     <td>
       <figure>
-        <img src="Deep_learning_Architectures/results/ResNet/test/Epochs9.png" alt="Image 1" width="200">
+        <img src="Deep_learning_Architectures/results/ResNet/test/Epochs9.png" alt="Image 1" width="250">
         <figcaption>Test Accuracy over Epochs</figcaption>
       </figure>
     </td>
