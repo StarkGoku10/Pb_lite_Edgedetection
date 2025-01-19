@@ -65,7 +65,7 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 
 Ensure you have Python 3.8 or later installed. Install additional dependencies listed in the `requirements.txt` file.
 
-#### Setup Instructions
+### Setup Instructions
 
 1. **Clone this repository**:
    ```bash
@@ -96,35 +96,38 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
 
 **Note** :All the paths to store the intermediate and final results are appropriately directed to the correct directory.
 
-#### Running the Code
-Navigate to Classical_Edge_Detection Directory:
-```bash 
-cd Classical_Edge_Detection
-```
+### Running the Code
 
-Run Pb_lite script to process all 10 images in the dataset and generate outputs:
-```bash
-python pb_lite.py
-```
+1. **Navigate to Classical_Edge_Detection Directory**:
+    ```bash 
+    cd Classical_Edge_Detection
+    ```
 
-Optional argument:
-- `--Maps_flag`: If set to `False`, precomputed maps will be loaded instead of generating new ones.
+2. **Run Pb_lite** script to process all 10 images in the dataset and generate outputs:
+    ```bash
+    python pb_lite.py
+    ```
 
-Example:
-```bash
-python pb_lite.py --Maps_flag=False
-```
-- **Input**: The script will load and process images stored in `Datasets/BSDS500/Images` directory.
+    Optional argument:
+    - `--Maps_flag`: If set to `False`, precomputed maps will be loaded instead of generating new ones.
 
-#### Outputs
+    Example:
+    ```bash
+    python pb_lite.py --Maps_flag=False
+    ```
 
-- Filter banks visualizations: Saved in `results/filterbanks/`.
-- Maps (texture, brightness, color): Saved in `results/maps/`.
-- Gradients and final edge-detected images: Saved in `results/edges/imgX/` (where `X` is the image number).
+    - **Input**: The script will load and process images stored in `Datasets/BSDS500/Images` directory.
+
+    - **Outputs**:
+
+        - Filter banks visualizations: Saved in `results/filterbanks/`.
+        - Maps (texture, brightness, color): Saved in `results/maps/`.
+        - Gradients and final edge-detected images: Saved in `results/edges/imgX/` (where `X` is the image number).
 
 ### Deep Learning Approaches:
 
 ### Prerequisites
+
 - **Python 3.7** or later.
 - **TensorFlow v1.x**: Ensure TensorFlow v1.x is installed for compatibility with the codebase.
 - **GPU Support (Optional but recommended)**: Install CUDA and cuDNN for faster training.
@@ -134,30 +137,64 @@ python pb_lite.py --Maps_flag=False
         pip install -r requirements.txt
        ```
 
-#### Running the Code
-Navigate to Deep_learning_Architectures Directory:
-```bash 
-cd Deep_learning_Architectures
-```
-Training models:
-- Run `Train.py` script to train a model:
-    ```bash
-    python train.py --BasePath Datasets/CIFAR10/Train \
+### Running the Code
+1. **Navigate to Deep_learning_Architectures Directory**:
+    ```bash 
+    cd Deep_learning_Architectures
+    ```
+
+2. **Training models**:
+    - Run `Train.py` script to train a model:
+        ```bash
+        python train.py --BasePath Datasets/CIFAR10/Train \
+                    --CheckPointPath Checkpoints/DenseNet/ \
+                    --NumEpochs 10 \
+                    --MiniBatchSize 64
+        ```
+        **Note**: The default model is DenseNet. To change the model, navigate to `Network/`, select your model of choice and import it to the `train.py` file.
+
+        Optional arguments:
+        - `--DivTrain`: Factor to reduce training data for faster epochs (default: `1`).
+        - `--LogsPath`: Path to save TensorBoard logs (default: `Deep_learning_architectures/Logs/DenseNet/`).
+        - `--LoadCheckPoint`: Set to 1 to resume training from the latest checkpoint, otherwise set to 0.
+
+        Example to load from the latest checkpoint:
+        ```bash
+        python train.py --BasePath Datasets/CIFAR10/Train \
                 --CheckPointPath Checkpoints/DenseNet/ \
                 --NumEpochs 10 \
-                --MiniBatchSize 64
-    ```
-    **Note**: The default model is DenseNet. To change the model, navigate to `Network/` and choose your model of choice.
+                --MiniBatchSize 64 \
+                --LoadCheckPoint 1
+        ```
+3. **Monitor Training Proress**:
+    - **Tensorboard**: Launch TensorBoard to visualize training metrics:
+        ```bash
+        tensorboard --logdir=Deep_learning_architectures/Logs/DenseNet/
+        ```
+    - Open a browser and navigate to `http://localhost:6006/`.
 
-    Optional arguments:
-     - `--DivTrain`: Factor to reduce training data for faster epochs (default: `1`).
-     - `--LogsPath`: Path to save TensorBoard logs (default: `Deep_learning_architectures/Logs/DenseNet/`).
-    - `--LoadCheckPoint`: Set to 1 to resume training from the latest checkpoint, otherwise set to 0.
+4. **Evaluating the model**:
+    - Ensure the trained model checkpoints are saved in the specified directory:
+        `Deep_learning_architectures/Checkpoints/<ModelName>/`
+        Replace `<ModelName>` with the name of the model (e.g., `DenseNet`).
+    - Ground truth labels for the test set should be saved in:
+       `Deep_learning_Architectures/TxtFiles/LabelsTest.txt`
+    - Run Inference: 
+        ```bash
+        python test.py --BasePath Datasets/CIFAR10/Test/ \
+               --ModelPath Deep_learning_architectures/Checkpoints/DenseNet/ \
+               --LabelsPath Deep_learning_Architectures/TxtFiles/LabelsTest.txt
+        ```
+        **Note**: The default model is DenseNet. To change the model, navigate to `Network/`, select your model of choice and import it to the `test.py` file.
 
-Example:
-```bash
-python pb_lite.py --Maps_flag=False
-```
+        Optional arguements:
+        - `--NumEpochs`: Number of epochs to evaluate (default: 3).
+        - `--ModelPath`: Path to the directory containing the model checkpoints.
+        - `--BasePath`: Path to the directory containing the test images.
+        - `--LabelsPath`: Path to the file containing ground truth labels for the test set.
+
+        Example to test the model after 5 epochs
+
 
 ## Results
 
