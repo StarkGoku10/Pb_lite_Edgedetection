@@ -313,5 +313,8 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 2. **Model Specific Parameters**:
     - Parameters like Depth, no. of layers, types of layers, and other architecture specific techniques.
 
+## License 
+
+This project is licensed under the LICENSE
 ---
 
