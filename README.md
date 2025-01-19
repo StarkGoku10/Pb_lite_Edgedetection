@@ -1,6 +1,6 @@
 # PB-Lite Algorithm for Edge Detection & Deep Learning Approaches for Image Clasification
 
-![PB-Lite Banner](https://raw.githubusercontent.com/your-repo/pb-lite-edge-detection/main/assets/images/pb_lite_banner.png)
+![PB-Lite Banner](Classical_Edge_Detection/results/edges/img3/ColorMap_3.png)
 
 ## Overview
 
@@ -238,12 +238,12 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
     <td>
       <figure>
         <img src="Deep_learning_Architectures/results/CNN_BN/test/Epochs19.png" alt="Image 1" width="250">
-        <figcaption>Test Accuracy over Epochs</figcaption>
+        <figcaption>Accuracy over Epochs</figcaption>
       </figure>
     </td>
     <td>
       <figure>
-        <img src="Deep_learning_Architectures/results/CNN_BN/test/CNN2.png" alt="Image 2" width="200">
+        <img src="Deep_learning_Architectures/results/CNN_BN/test/CNN2.png" alt="Image 2" width="250">
         <figcaption>Confusion Matrix</figcaption>
       </figure>
     </td>
@@ -257,12 +257,12 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
     <td>
       <figure>
         <img src="Deep_learning_Architectures/results/DenseNet/test/Epochs17.png" alt="Image 1" width="250">
-        <figcaption>Test Accuracy over Epochs</figcaption>
+        <figcaption> Accuracy over Epochs</figcaption>
       </figure>
     </td>
     <td>
       <figure>
-        <img src="Deep_learning_Architectures/results/DenseNet/test/DenseNet.png" alt="Image 2" width="200">
+        <img src="Deep_learning_Architectures/results/DenseNet/test/DenseNet.png" alt="Image 2" width="250">
         <figcaption>Confusion Matrix</figcaption>
       </figure>
     </td>
@@ -281,7 +281,7 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
     </td>
     <td>
       <figure>
-        <img src="Deep_learning_Architectures/results/ResNet/test/ResNet.png" alt="Image 2" width="200">
+        <img src="Deep_learning_Architectures/results/ResNet/test/ResNet.png" alt="Image 2" width="250">
         <figcaption>Confusion Matrix</figcaption>
       </figure>
     </td>
@@ -305,8 +305,13 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 
 ### Deep learning Image Classification:
 
-1. ** Hyperparameters Optimizations**:
-    -
+1. **Hyperparameters Optimizations**:
+    - Start with a high learning rate and gradually reduce it to fine-tune weights.
+    - Experiment with different batch sizes. Smaller batches may lead to better generalization, while larger batches improve stability.
+    - Test different optimizers to find the best fit for your architecture.
+    - Increase or decreses the number of epochs depending on your specific requirements.
+2. **Model Specific Parameters**:
+    - Parameters like Depth, no. of layers, types of layers, and other architecture specific techniques.
 
 ---
 
