@@ -217,8 +217,8 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
 Below are sample outputs from the PB-Lite algorithm:
 
 #### Filter Banks
-![LM Filter Bank](https://raw.githubusercontent.com/StarkGoku10/Pb_lite_Edgedetection/Classical_Edge_Detection/results/edges/img1.png)
-![DoG Filter Bank](https://raw.githubusercontent.com/StarkGoku10/Pb_lite_Edgedetection/Classical_Edge_Detection/results/edges/img4.png)
+![LM Filter Bank](https://raw.githubusercontent.com/StarkGoku10/Pb_lite_Edgedetection/Classical_Edge_Detection/results/edges/img1/PbLite_output_1.png)
+![DoG Filter Bank](https://raw.githubusercontent.com/StarkGoku10/Pb_lite_Edgedetection/Classical_Edge_Detection/results/edges/img1/PbLite_output_4.png)
 ![Gabor Filter Bank](https://raw.githubusercontent.com/your-repo/pb-lite-edge-detection/main/assets/images/gabor_filter_bank.png)
 
 #### Edge Detection Results
