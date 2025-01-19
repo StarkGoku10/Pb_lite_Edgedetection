@@ -231,25 +231,81 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
   </tr>
 </table>
 
+### Deep Learning Image Classification Results:
 
-## Fine-Tuning for Better Performance
+Custom Network: Custom CNN Architecture
+<table>
+  <tr>
+    <td>
+      <figure>
+        <img src="Deep_learning_Architectures/results/CNN_BN/test/Epochs19.png" alt="Image 1" width="200">
+        <figcaption>Test Accuracy over Epochs</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src="Deep_learning_Architectures/results/CNN_BN/test/CNN2.png" alt="Image 2" width="200">
+        <figcaption>Confusion Matrix</figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+
+DenseNet
+<table>
+  <tr>
+    <td>
+      <figure>
+        <img src="Deep_learning_Architectures/results/DenseNet/test/Epochs17.png" alt="Image 1" width="200">
+        <figcaption>Test Accuracy over Epochs</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src="Deep_learning_Architectures/results/DenseNet/test/DenseNet.png" alt="Image 2" width="200">
+        <figcaption>Confusion Matrix</figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+
+ResNet
+<table>
+  <tr>
+    <td>
+      <figure>
+        <img src="Deep_learning_Architectures/results/ResNet/test/Epochs9.png" alt="Image 1" width="200">
+        <figcaption>Test Accuracy over Epochs</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src="Deep_learning_Architectures/results/ResNet/test/ResNet.png" alt="Image 2" width="200">
+        <figcaption>Confusion Matrix</figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+
+## Fine-Tuning for Better Performance:
+
+### Pb-lite Edge detection:
 
 1. **Adjust Filter Parameters**:
    - Modify kernel sizes, orientations, and scales for LM, DoG, and Gabor filters in the script.
-
 2. **Clustering Optimization**:
    - Experiment with different values of `num_clusters` in texture, brightness, and color map generation.
-
 3. **Gradient Weights**:
    - Adjust the weights `alpha`, `beta`, and `gamma` in the edge combination step for optimal blending.
-
 4. **Dataset**:
    - Test the algorithm on additional datasets to generalize performance.
-
 5. **Baseline Blending**:
    - Experiment with different combinations of Sobel and Canny baselines.
 
----
+### Deep learning Image Classification:
 
-For more details or to contribute, please contact [your-email@example.com].
+1. ** Hyperparameters Optimizations**:
+    -
+
+---
 
