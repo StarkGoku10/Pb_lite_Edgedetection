@@ -315,6 +315,7 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 
 ## License 
 
-This project is licensed under the LICENSE
+    This project is licensed under the terms of the [MIT License](./LICENSE).
+
 ---
 
