@@ -158,14 +158,15 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
         - `--LogsPath`: Path to save TensorBoard logs (default: `Deep_learning_architectures/Logs/DenseNet/`).
         - `--LoadCheckPoint`: Set to 1 to resume training from the latest checkpoint, otherwise set to 0.
 
-        Example to load from the latest checkpoint:
-        ```bash
-        python train.py --BasePath Datasets/CIFAR10/Train \
-                --CheckPointPath Checkpoints/DenseNet/ \
-                --NumEpochs 10 \
-                --MiniBatchSize 64 \
-                --LoadCheckPoint 1
-        ```
+            Example to load from the latest checkpoint:
+            ```bash
+            python train.py --BasePath Datasets/CIFAR10/Train \
+                    --CheckPointPath Checkpoints/DenseNet/ \
+                    --NumEpochs 10 \
+                    --MiniBatchSize 64 \
+                    --LoadCheckPoint 1
+            ```
+
 3. **Monitor Training Proress**:
     - **Tensorboard**: Launch TensorBoard to visualize training metrics:
         ```bash
@@ -193,7 +194,20 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
         - `--BasePath`: Path to the directory containing the test images.
         - `--LabelsPath`: Path to the file containing ground truth labels for the test set.
 
-        Example to test the model after 5 epochs
+            Example to test the model after 5 epochs:
+            ```bash
+            python test.py --BasePath Datasets/CIFAR10/Test/ \
+               --ModelPath Deep_learning_architectures/Checkpoints/DenseNet/ \
+               --LabelsPath Deep_learning_Architectures/TxtFiles/LabelsTest.txt \
+               --NumEpochs 5
+            ```
+
+5. **Results**:
+    - Training results are stored in `Results/<model name>/train/` Directory. It includes `training loss and accuracy over epochs`.
+    - Testing results are stored in ``Results/<model name>/test/` Directory. It includes `testing accuracy over epochs` and `confusion matrix`.
+    - Predicted labels are saved in `Deep_learning_Architectures/TxtFiles/PredOut.txt` file.
+
+    **Note**: Ensure the paths for reading the respective images, labels, checkpoints are directed according to directory structure.
 
 
 ## Results
@@ -203,8 +217,8 @@ Ensure you have Python 3.8 or later installed. Install additional dependencies l
 Below are sample outputs from the PB-Lite algorithm:
 
 #### Filter Banks
-![LM Filter Bank](https://raw.githubusercontent.com/your-repo/pb-lite-edge-detection/main/assets/images/lm_filter_bank.png)
-![DoG Filter Bank](https://raw.githubusercontent.com/your-repo/pb-lite-edge-detection/main/assets/images/dog_filter_bank.png)
+![LM Filter Bank](https://raw.githubusercontent.com/StarkGoku10/Pb_lite_Edgedetection/Classical_Edge_Detection/results/edges/img1.png)
+![DoG Filter Bank](https://raw.githubusercontent.com/StarkGoku10/Pb_lite_Edgedetection/Classical_Edge_Detection/results/edges/img4.png)
 ![Gabor Filter Bank](https://raw.githubusercontent.com/your-repo/pb-lite-edge-detection/main/assets/images/gabor_filter_bank.png)
 
 #### Edge Detection Results
