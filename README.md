@@ -232,6 +232,7 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 ### Deep Learning Image Classification Results:
 
 **Custom Network: Custom CNN Architecture**
+
 <table>
   <tr>
     <td>
@@ -251,6 +252,7 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 
 **DenseNet**
 <table>
+
   <tr>
     <td>
       <figure>
@@ -268,6 +270,7 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
 </table>
 
 **ResNet**
+
 <table>
   <tr>
     <td>
