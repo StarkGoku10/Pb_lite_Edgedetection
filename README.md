@@ -243,7 +243,7 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
     </td>
     <td>
       <figure>
-        <img src="Deep_learning_Architectures/results/CNN_BN/test/CNN2.png" alt="Image 2" width="200>
+        <img src="Deep_learning_Architectures/results/CNN_BN/test/CNN2.png" alt="Image 2" width="200">
         <figcaption>Confusion Matrix</figcaption>
       </figure>
     </td>
@@ -276,7 +276,7 @@ Read More in detail here: [CMSC-733, Homework0:Alohomora](https://cmsc733.github
     <td>
       <figure>
         <img src="Deep_learning_Architectures/results/ResNet/test/Epochs9.png" alt="Image 1" width="250">
-        <figcaption>Test Accuracy over Epochs</figcaption>
+        <figcaption> Accuracy over Epochs</figcaption>
       </figure>
     </td>
     <td>
